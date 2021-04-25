@@ -56,6 +56,11 @@ Use MariaDB (recommended) or Mysql as the external database.</Description>
       <Name>WORDPRESS_DB_PASSWORD</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>WORDPRESS_DB_NAME</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Container port" Target="80" Default="" Mode="tcp" Description="Connects to internal port 80 (Ex. 8080:80)" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
@@ -63,4 +68,5 @@ Use MariaDB (recommended) or Mysql as the external database.</Description>
   <Config Name="WORDPRESS_DB_HOST" Target="WORDPRESS_DB_HOST" Default="" Mode="" Description="External database container hostname and port &#13;&#10;&amp;lt;br&amp;gt;ex. 192.168.1.100:8080" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="WORDPRESS_DB_USER" Target="WORDPRESS_DB_USER" Default="" Mode="" Description="External database user" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="WORDPRESS_DB_PASSWORD" Target="WORDPRESS_DB_PASSWORD" Default="" Mode="" Description="External database password" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="WORDPRESS_DB_NAME" Target="WORDPRESS_DB_NAME" Default="" Mode="" Description="The WORDPRESS_DB_NAME needs to already exist on the given DB server; it will not be created by the wordpress container." Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
